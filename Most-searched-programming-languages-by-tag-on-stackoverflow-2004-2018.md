@@ -149,7 +149,8 @@ ggplot(total_searches_per_year, aes(year, year_total)) +
   annotate(geom ="point", x=as.Date("2018-01-01"), y = 1085170, size = 15, shape = 1, fill = "transparent")
 ```
 
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![Total searches per year](https://user-images.githubusercontent.com/101715443/159086015-89e458c0-28b5-47d4-bcf3-aa75c8cd6344.png)
+
 
 ``` r
 ggsave('Total searches per year', device = "png",
@@ -210,7 +211,8 @@ ggplot(r_python_over_time, aes(year, fraction, color = tag, size = 1)) +
   labs(color = 'Tags')
 ```
 
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![Percentage searches for R and Python tags](https://user-images.githubusercontent.com/101715443/159086060-2e0c990f-f563-4fc3-b3a4-d29cbadc2025.png)
+
 
 ``` r
 ggsave('Percentage searches for R and Python tags', device = "png",
@@ -256,7 +258,9 @@ ggplot(selected_tags_over_time, aes(year, fraction, color = tag)) +
   theme(legend.position = 'none')
 ```
 
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![Python libraries searched](https://user-images.githubusercontent.com/101715443/159086165-16c6c80f-0133-44df-9909-779612584ea1.png)
+
+
 
 ``` r
 ggsave('How often were R/Python libraries searched', device = "png",
@@ -303,7 +307,8 @@ ggplot(by_tag_subset, aes(year, fraction, color = tag)) +
   theme(legend.position = 'none')
 ```
 
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![How often were data analysis programmes searched](https://user-images.githubusercontent.com/101715443/159086179-bdb6d18e-481f-45a5-a8e6-29b23d22242c.png)
+
 
 ``` r
 ggsave("How often were data analysis programmes searched", device = "png",
@@ -378,7 +383,8 @@ geom_line(size = 1, linejoin = "round") +
   theme(legend.position = 'none')
 ```
 
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![10 Most searched programming languages between 2008 - 2018](https://user-images.githubusercontent.com/101715443/159086197-33a547a0-48ef-4f1d-b3b9-11d0dfd95333.png)
+
 
 ``` r
 ggsave("10 Most searched programming languages between 2008 - 2018", device = "png",
