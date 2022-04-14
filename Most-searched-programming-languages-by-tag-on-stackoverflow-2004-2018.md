@@ -132,10 +132,10 @@ as.data.frame(total_searches_per_year)
     ## 11 2018-01-01    1085170
 
 ``` r
-kable(total_searches_per_year, col.names = c("1", "2"))
+kable(total_searches_per_year, col.names = c("Year", "Total"))
 ```
 
-| 1          |       2 |
+| Year       | Total   |
 |:-----------|--------:|
 | 2008-01-01 |   58390 |
 | 2009-01-01 |  343868 |
@@ -167,8 +167,7 @@ ggplot(total_searches_per_year, aes(year, year_total)) +
            label="Sudden collapse. \n I suspect the data is incomplete.", size = 2, color = "burlywood4" )+
   annotate(geom ="point", x=as.Date("2018-01-01"), y = 1085170, size = 15, shape = 1, fill = "transparent")
 ```
-
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![Total searches per year11](https://user-images.githubusercontent.com/101715443/163364469-aa1eeec3-8f60-477f-a31b-5af0cc95043f.png)
 
 ``` r
 ggsave('Total searches per year', device = "png",
@@ -228,8 +227,7 @@ ggplot(r_python_over_time, aes(year, fraction, color = tag, size = 1)) +
         legend.title.align=0.5) +
   labs(color = 'Tags')
 ```
-
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![Percentage searches for R and Python tags](https://user-images.githubusercontent.com/101715443/163364984-d2168c05-8870-438a-a118-dae8441f791d.png)
 
 ``` r
 ggsave('Percentage searches for R and Python tags', device = "png",
@@ -274,8 +272,7 @@ ggplot(selected_tags_over_time, aes(year, fraction, color = tag)) +
   geom_label_repel(aes(label = label), nudge_x = 1, na.rm = TRUE) +
   theme(legend.position = 'none')
 ```
-
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![Python libraries searched](https://user-images.githubusercontent.com/101715443/163365020-0fe38e45-2e9f-4b20-9685-442a2f239c08.png)
 
 ``` r
 ggsave('How often were R/Python libraries searched', device = "png",
@@ -321,8 +318,7 @@ ggplot(by_tag_subset, aes(year, fraction, color = tag)) +
   geom_label_repel(aes(label = label), nudge_x = 1, na.rm = TRUE) +
   theme(legend.position = 'none')
 ```
-
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![How often were data analysis programmes searched](https://user-images.githubusercontent.com/101715443/163364817-e9bb3695-298c-4633-8c8f-1683039dba84.png)
 
 ``` r
 ggsave("How often were data analysis programmes searched", device = "png",
@@ -396,8 +392,7 @@ geom_line(size = 1, linejoin = "round") +
   geom_label_repel(aes(label = label), nudge_x = 1, na.rm = TRUE) +
   theme(legend.position = 'none')
 ```
-
-![](Most-searched-programming-languages-by-tag-on-stackoverflow-2004-2018_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![10 Most searched programming languages between 2008 - 2018](https://user-images.githubusercontent.com/101715443/163365129-8fa96cb7-ed11-4659-9db3-4444dcb7d84d.png)
 
 ``` r
 ggsave("10 Most searched programming languages between 2008 - 2018", device = "png",
